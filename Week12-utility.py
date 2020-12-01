@@ -53,3 +53,24 @@ def score_finder(names, scores, toscore):
     else:
         print("OUTPUT player not found")
 
+
+def union(list1, list2):
+    temp1 = list1
+    temp2 = list2
+    final = []
+
+    for i in range(0, len(temp1)):
+        if temp1[i] in temp2:
+            temp2[temp2.index(temp1[i])] = "NahG"
+            temp1[i] = "NahG"
+
+    for i in range(0, len(temp1)):
+        if temp1[i] != "NahG":
+            final.append(temp1[i])
+
+    for i in range(0, len(temp2)):
+        if temp2[i] != "NahG":
+            final.append(temp2[i])
+
+    return final
+
