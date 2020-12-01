@@ -4,6 +4,8 @@
 # References: Brenton Dixon, Chad Holmes
 # Time: 50 minutes
 
+import math
+
 
 def load_file(name):
     file = open(name, "r")
@@ -93,4 +95,23 @@ def not_in(list1, list2):
             result.append(list1[i])
 
     return result
+
+
+def is_prime(number):
+    num = number
+
+    if num == 0:
+        return "Neither prime nor composite"
+    if num == 1:
+        return False
+    if num == 2:
+        return True
+
+    root = int(math.sqrt(num))
+
+    for i in range(2, root + 1):
+        if number % i == 0:
+            return False
+
+    return True
 
