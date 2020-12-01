@@ -14,3 +14,13 @@ def load_file(name):
 
     return list1
 
+
+def update_string(org, add, ind):
+    temp = ""
+    for i in range(0, len(org)):
+        if i == ind:
+            for j in range(0, len(add)):
+                temp += add[j]
+        temp += org[i]
+
+    return temp
