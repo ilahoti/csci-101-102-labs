@@ -36,3 +36,20 @@ def find_word_count(list2, tofind):
                 count += 1
 
     return count
+
+
+def score_finder(names, scores, toscore):
+    count = 0
+    name = ""
+    score = 0
+    for i in range(0, len(names)):
+        if names[i].lower() == toscore:
+            name = names[i]
+            score = scores[i]
+            count += 1
+
+    if count >= 1:
+        print("OUTPUT " + name + " got a score of " + str(score))
+    else:
+        print("OUTPUT player not found")
+
