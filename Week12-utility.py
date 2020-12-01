@@ -24,3 +24,15 @@ def update_string(org, add, ind):
         temp += org[i]
 
     return temp
+
+
+def find_word_count(list2, tofind):
+    count = 0
+    temp = list2
+    for i in temp:
+        temp2 = i.split(" ")
+        for j in temp2:
+            if j == tofind:
+                count += 1
+
+    return count
